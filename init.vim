@@ -32,6 +32,13 @@ Plug 'tpope/vim-dispatch'
 
 call plug#end()
 
+" show buffer top bar
+let g:airline#extensions#tabline#enabled = 1
+
+" keybindings
+nnoremap <C-j> :bp<CR>
+nnoremap <C-k> :bn<CR>
+nnoremap <C-o> :bd<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 " use space as leader keys
