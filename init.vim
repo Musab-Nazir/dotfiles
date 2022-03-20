@@ -14,16 +14,16 @@ call plug#begin()
 
 " Status bar
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " File tree
 Plug 'scrooloose/nerdtree'
-
+" Icons
+Plug 'ryanoasis/vim-devicons'
 " Themes
 Plug 'EdenEast/nightfox.nvim'
-
 " Fuzzy finder
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-
 " Clojure stuff
 Plug 'Olical/conjure'		
 Plug 'clojure-vim/vim-jack-in'
@@ -34,6 +34,8 @@ call plug#end()
 
 " show buffer top bar
 let g:airline#extensions#tabline#enabled = 1
+" set airline theme
+let g:airline_theme='night_owl'
 
 " keybindings
 nnoremap <C-j> :bp<CR>
