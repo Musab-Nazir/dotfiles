@@ -5,6 +5,9 @@ set encoding=utf-8
 set mouse=a 
 " Highlight the line where the cursor is
 set cursorline
+set tabstop=4 
+set softtabstop=4
+set hidden
 
 " wrapping stuff
 set textwidth=100
@@ -48,6 +51,13 @@ let mapleader = " "
 let maplocalleader = " "
 
 " Find files using Telescope command-line sugar.
-nnoremap <C-f> <cmd>Telescope find_files<cr>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+
+" Smart way to move between panes
+map <up> <C-w><up>
+map <down> <C-w><down>
+map <left> <C-w><left>
+map <right> <C-w><right>
 
 colorscheme nordfox
