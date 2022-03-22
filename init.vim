@@ -12,6 +12,8 @@ set hidden
 " wrapping stuff
 set textwidth=100
 set colorcolumn=100
+" copy/paste to system clipboard
+set clipboard=unnamedplus
 
 call plug#begin()
 
@@ -27,6 +29,9 @@ Plug 'EdenEast/nightfox.nvim'
 " Fuzzy finder
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+" Gitsigns
+Plug 'nvim-lua/plenary.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 " Clojure stuff
 Plug 'Olical/conjure'		
 Plug 'clojure-vim/vim-jack-in'
@@ -39,6 +44,7 @@ call plug#end()
 let g:airline#extensions#tabline#enabled = 1
 " set airline theme
 let g:airline_theme='night_owl'
+lua require('gitsigns').setup()
 
 " keybindings
 nnoremap <C-j> :bp<CR>
