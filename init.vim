@@ -26,6 +26,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 " Themes
 Plug 'EdenEast/nightfox.nvim'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'arzg/vim-colors-xcode'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 " Fuzzy finder
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -42,8 +45,9 @@ call plug#end()
 
 " show buffer top bar
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 " set airline theme
-let g:airline_theme='night_owl'
+let g:airline_theme='ayu_mirage'
 lua require('gitsigns').setup()
 
 " keybindings
@@ -66,4 +70,4 @@ map <down> <C-w><down>
 map <left> <C-w><left>
 map <right> <C-w><right>
 
-colorscheme nordfox
+colorscheme xcodedarkhc
