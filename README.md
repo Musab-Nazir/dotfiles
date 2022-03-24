@@ -1,3 +1,4 @@
-# vim-config
+# dotfiles
 
-This is just my vim config. I put it on a repo to make setting up new machines easier
+This is a collection of config files I used for a number of different tools and apps
+
