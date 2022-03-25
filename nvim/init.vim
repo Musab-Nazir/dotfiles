@@ -40,6 +40,7 @@ Plug 'Olical/conjure'
 Plug 'clojure-vim/vim-jack-in'
 Plug 'radenling/vim-dispatch-neovim'
 Plug 'tpope/vim-dispatch'
+Plug 'guns/vim-sexp'
 
 call plug#end()
 
@@ -48,6 +49,13 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 " set airline theme
 let g:airline_theme='ayu_mirage'
+let g:sexp_mappings = {
+						\ 'sexp_capture_next_element': '>)',
+						\ 'sexp_capture_prev_element': '<(',
+						\ 'sexp_emit_head_element': '>(',
+						\ 'sexp_emit_tail_element': '<)'
+						\ }
+
 lua require('gitsigns').setup()
 
 " keybindings
