@@ -41,12 +41,15 @@ Plug 'clojure-vim/vim-jack-in'
 Plug 'radenling/vim-dispatch-neovim'
 Plug 'tpope/vim-dispatch'
 Plug 'guns/vim-sexp'
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
 " show buffer top bar
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline#extensions#ale#enabled = 1
+let g:ale_linters = {'clojure': ['clj-kondo']}
 " set airline theme
 let g:airline_theme='ayu_mirage'
 let g:sexp_mappings = {
