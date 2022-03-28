@@ -10,8 +10,8 @@ set softtabstop=4
 set hidden
 
 " wrapping stuff
-" set textwidth=100
-" set colorcolumn=100
+set textwidth=120
+set colorcolumn=120
 " copy/paste to system clipboard
 set clipboard=unnamedplus
 
@@ -20,13 +20,15 @@ call plug#begin()
 " Status bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" Comments
+Plug 'tpope/vim-commentary'
 " File tree
 Plug 'scrooloose/nerdtree'
 " Icons
 Plug 'ryanoasis/vim-devicons'
 " Themes
 Plug 'EdenEast/nightfox.nvim'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'morhetz/gruvbox'
 Plug 'arzg/vim-colors-xcode'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 " Fuzzy finder
@@ -46,7 +48,6 @@ call plug#end()
 
 " show buffer top bar
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#ale#enabled = 1
 let g:ale_linters = {'clojure': ['clj-kondo']}
 " set airline theme
@@ -64,8 +65,10 @@ lua require('gitsigns').setup()
 nnoremap <C-j> :bp<CR>
 nnoremap <C-k> :bn<CR>
 nnoremap <C-o> :bd<CR>
+
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
+
 " use space as leader keys
 let mapleader = " "
 let maplocalleader = " "
@@ -74,6 +77,10 @@ let maplocalleader = " "
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 
+" Toggle comments
+nnoremap <leader>cc :Commentary<cr>
+nnoremap <leader>cs {v}:Commentary<cr>
+nnoremap Y y$ 
 " Smart way to move between panes
 map <up> <C-w><up>
 map <down> <C-w><down>
