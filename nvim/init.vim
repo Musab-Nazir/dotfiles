@@ -10,8 +10,8 @@ set softtabstop=4
 set hidden
 
 " wrapping stuff
-set textwidth=100
-set colorcolumn=100
+" set textwidth=100
+" set colorcolumn=100
 " copy/paste to system clipboard
 set clipboard=unnamedplus
 
@@ -33,7 +33,6 @@ Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 " Gitsigns
-Plug 'nvim-lua/plenary.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 " Clojure stuff
 Plug 'Olical/conjure'		
@@ -51,7 +50,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#ale#enabled = 1
 let g:ale_linters = {'clojure': ['clj-kondo']}
 " set airline theme
-let g:airline_theme='ayu_mirage'
+let g:airline_theme='base16_atelier_cave'
 let g:sexp_mappings = {
 						\ 'sexp_capture_next_element': '>)',
 						\ 'sexp_capture_prev_element': '<(',
@@ -81,4 +80,4 @@ map <down> <C-w><down>
 map <left> <C-w><left>
 map <right> <C-w><right>
 
-colorscheme xcodedarkhc
+colorscheme catppuccin
