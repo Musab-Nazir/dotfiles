@@ -27,14 +27,14 @@ Plug 'scrooloose/nerdtree'
 " Icons
 Plug 'ryanoasis/vim-devicons'
 " Themes
-Plug 'EdenEast/nightfox.nvim'
 Plug 'morhetz/gruvbox'
 Plug 'arzg/vim-colors-xcode'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+Plug 'rebelot/kanagawa.nvim'
 " Fuzzy finder
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-" Gitsigns
+" Git
 Plug 'lewis6991/gitsigns.nvim'
 " Clojure stuff
 Plug 'Olical/conjure'		
@@ -50,6 +50,7 @@ call plug#end()
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:ale_linters = {'clojure': ['clj-kondo']}
+
 " set airline theme
 let g:airline_theme='base16_atelier_cave'
 let g:sexp_mappings = {
@@ -61,12 +62,12 @@ let g:sexp_mappings = {
 
 lua require('gitsigns').setup()
 
-" keybindings
+"============================Keybindings================================
 nnoremap <C-j> :bp<CR>
 nnoremap <C-k> :bn<CR>
 nnoremap <C-o> :bd<CR>
 
-nnoremap <C-n> :NERDTree<CR>
+" Toggle file tree
 nnoremap <C-t> :NERDTreeToggle<CR>
 
 " use space as leader keys
@@ -80,11 +81,17 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 " Toggle comments
 nnoremap <leader>cc :Commentary<cr>
 nnoremap <leader>cs {v}:Commentary<cr>
+
+" QoL improvements
 nnoremap Y y$ 
+nnoremap ; :
+vnoremap ; :
+nnoremap <leader>s :up<cr>
+
 " Smart way to move between panes
 map <up> <C-w><up>
 map <down> <C-w><down>
 map <left> <C-w><left>
 map <right> <C-w><right>
 
-colorscheme catppuccin
+colorscheme kanagawa
