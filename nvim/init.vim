@@ -5,8 +5,8 @@ set encoding=utf-8
 set mouse=a 
 " Highlight the line where the cursor is
 set cursorline
-set tabstop=4 
-set softtabstop=4
+set tabstop=2 
+set softtabstop=2
 set hidden
 
 " wrapping stuff
@@ -14,6 +14,8 @@ set textwidth=120
 set colorcolumn=120
 " copy/paste to system clipboard
 set clipboard=unnamedplus
+
+set completeopt=menu,menuone,noselect
 
 call plug#begin()
 
@@ -29,7 +31,6 @@ Plug 'ryanoasis/vim-devicons'
 " Themes
 Plug 'morhetz/gruvbox'
 Plug 'arzg/vim-colors-xcode'
-Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'rebelot/kanagawa.nvim'
 " Fuzzy finder
 Plug 'nvim-lua/plenary.nvim'
@@ -47,6 +48,13 @@ Plug 'dense-analysis/ale'
 " LSP stuff
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
+"LSP autocomplete
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
 
 call plug#end()
 
@@ -85,16 +93,18 @@ nnoremap <leader>df :Telescope find_files cwd=~/Code/<cr>
 nnoremap <leader>cc :Commentary<cr>
 nnoremap <leader>cs {v}:Commentary<cr>
 
-" QoL improvements
-nnoremap Y y$ 
-nnoremap <leader>s :up<cr>
-
 " Smart way to move between panes
 map <up> <C-w><up>
 map <down> <C-w><down>
 map <left> <C-w><left>
 map <right> <C-w><right>
 
+" Load extra lua config for LSP, autocomplete and gitsigns
 " lua require("config")
+
+" QoL improvements
+nnoremap Y y$ 
+nnoremap <leader>s :up<cr>
 nnoremap <F4> :lua package.loaded.config = nil <cr>:source ~/.config/nvim/init.vim <cr>
+
 colorscheme kanagawa
