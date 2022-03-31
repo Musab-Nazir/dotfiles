@@ -9,3 +9,10 @@ Make sure to install `vim-plug`. There are a few external dependencies needed th
 * brew install ripgrep
 ### Ale
 * brew install borkdude/brew/clj-kondo
+### LSP and Gitsigns
+To configure the LSP and custom git gutter signs, install the pacakges via `Plug Install` first. Then uncomment
+the following line from init.vim
+```
+ lua require("config")
+```
+This will load the lua config for LSP and install and configured typescript and clojure language servers

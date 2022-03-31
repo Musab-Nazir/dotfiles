@@ -44,6 +44,10 @@ Plug 'tpope/vim-dispatch'
 Plug 'guns/vim-sexp'
 Plug 'dense-analysis/ale'
 
+" LSP stuff
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/nvim-lsp-installer'
+
 call plug#end()
 
 " show buffer top bar
@@ -60,19 +64,6 @@ let g:sexp_mappings = {
 						\ 'sexp_emit_tail_element': '<)'
 						\ }
 
-" Git gutter signs
-lua << EOF
-require('gitsigns').setup{
-		signs = {
-				add          = {hl = 'GitSignsAdd'   , text = '+', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'},
-				change       = {hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
-				delete       = {hl = 'GitSignsDelete', text = '-', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
-				topdelete    = {hl = 'GitSignsDelete', text = '‾', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
-				changedelete = {hl = 'GitSignsChange', text = 'x', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
-				},
-}
-EOF
-
 "============================Keybindings================================
 nnoremap <C-j> :bp<CR>
 nnoremap <C-k> :bn<CR>
@@ -88,6 +79,7 @@ let maplocalleader = " "
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>df :Telescope find_files cwd=~/Code/<cr>
 
 " Toggle comments
 nnoremap <leader>cc :Commentary<cr>
@@ -95,8 +87,6 @@ nnoremap <leader>cs {v}:Commentary<cr>
 
 " QoL improvements
 nnoremap Y y$ 
-nnoremap ; :
-vnoremap ; :
 nnoremap <leader>s :up<cr>
 
 " Smart way to move between panes
@@ -105,4 +95,6 @@ map <down> <C-w><down>
 map <left> <C-w><left>
 map <right> <C-w><right>
 
+" lua require("config")
+nnoremap <F4> :lua package.loaded.config = nil <cr>:source ~/.config/nvim/init.vim <cr>
 colorscheme kanagawa
