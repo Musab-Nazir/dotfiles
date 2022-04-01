@@ -20,8 +20,7 @@ set completeopt=menu,menuone,noselect
 call plug#begin()
 
 " Status bar
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-lualine/lualine.nvim'
 " Comments
 Plug 'tpope/vim-commentary'
 " File tree
@@ -58,13 +57,11 @@ Plug 'saadparwaiz1/cmp_luasnip'
 
 call plug#end()
 
-" show buffer top bar
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#ale#enabled = 1
+" set linter for ale
 let g:ale_linters = {'clojure': ['clj-kondo']}
 
-" set airline theme
-let g:airline_theme='base16_atelier_cave'
+"============================Keybindings================================
+" custom mappings for vim-sexp
 let g:sexp_mappings = {
 						\ 'sexp_capture_next_element': '>)',
 						\ 'sexp_capture_prev_element': '<(',
@@ -72,7 +69,6 @@ let g:sexp_mappings = {
 						\ 'sexp_emit_tail_element': '<)'
 						\ }
 
-"============================Keybindings================================
 nnoremap <C-j> :bp<CR>
 nnoremap <C-k> :bn<CR>
 nnoremap <C-o> :bd<CR>
