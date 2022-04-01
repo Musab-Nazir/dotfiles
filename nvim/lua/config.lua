@@ -9,6 +9,12 @@ require('gitsigns').setup{
 			},
 }
 
+-- Treesitter
+require'nvim-treesitter.configs'.setup { 
+				ensure_installed = "maintained", 
+				highlight = { enable = true }
+}
+
 -- LuaLine
 require('lualine').setup {
   options = {

@@ -34,6 +34,8 @@ Plug 'rebelot/kanagawa.nvim'
 " Fuzzy finder
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+"Treesitter - syntax highlighting
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Git
 Plug 'lewis6991/gitsigns.nvim'
 " Clojure stuff
