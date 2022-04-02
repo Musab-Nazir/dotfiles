@@ -15,4 +15,4 @@ Then uncomment the following line from init.vim
 ```
  lua require("config")
 ```
-This will load the lua config for LSP, autocomplete and install and configured typescript and clojure language servers
+This will load the lua config for LSP, autocomplete, syntax highlighting and install/configure typescript + clojure language servers
