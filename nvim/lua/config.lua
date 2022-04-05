@@ -9,6 +9,30 @@ require('gitsigns').setup{
 			},
 }
 
+-- NvimTree
+require'nvim-tree'.setup()
+vim.g.nvim_tree_icons = {
+    default = "",
+    symlink = "",
+    git = {
+      deleted = "",
+      ignored = "◌",
+      renamed = "➜",
+      staged = "✓",
+      unmerged = "",
+      unstaged = "✗",
+      untracked = "★",
+    },
+    folder = {
+      default = "",
+      empty = "",
+      empty_open = "",
+      open = "",
+      symlink = "",
+      symlink_open = "",
+    },
+}
+
 -- Treesitter
 require'nvim-treesitter.configs'.setup { 
 				ensure_installed = "maintained", 

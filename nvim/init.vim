@@ -21,23 +21,29 @@ call plug#begin()
 
 " Status bar
 Plug 'nvim-lualine/lualine.nvim'
+
 " Comments
 Plug 'tpope/vim-commentary'
+
 " File tree
-Plug 'scrooloose/nerdtree'
-" Icons
-Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
+
 " Themes
 Plug 'morhetz/gruvbox'
 Plug 'arzg/vim-colors-xcode'
 Plug 'rebelot/kanagawa.nvim'
+
 " Fuzzy finder
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+
 "Treesitter - syntax highlighting
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 " Git
 Plug 'lewis6991/gitsigns.nvim'
+
 " Clojure stuff
 Plug 'Olical/conjure'		
 Plug 'clojure-vim/vim-jack-in'
@@ -49,6 +55,7 @@ Plug 'dense-analysis/ale'
 " LSP stuff
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
+
 "LSP autocomplete
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -63,6 +70,10 @@ call plug#end()
 let g:ale_linters = {'clojure': ['clj-kondo']}
 
 "============================Keybindings================================
+" use space as leader keys
+let mapleader = " "
+let maplocalleader = " "
+
 " custom mappings for vim-sexp
 let g:sexp_mappings = {
 						\ 'sexp_capture_next_element': '>)',
@@ -76,11 +87,7 @@ nnoremap <C-k> :bn<CR>
 nnoremap <C-o> :bd<CR>
 
 " Toggle file tree
-nnoremap <C-t> :NERDTreeToggle<CR>
-
-" use space as leader keys
-let mapleader = " "
-let maplocalleader = " "
+nnoremap <leader>fe :NvimTreeToggle<cr>
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
