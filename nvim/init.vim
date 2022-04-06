@@ -8,13 +8,12 @@ set cursorline
 set tabstop=2 
 set softtabstop=2
 set hidden
-
 " wrapping stuff
 set textwidth=120
 set colorcolumn=120
 " copy/paste to system clipboard
 set clipboard=unnamedplus
-
+" autocomplete
 set completeopt=menu,menuone,noselect
 
 call plug#begin()
@@ -83,6 +82,7 @@ let g:sexp_mappings = {
 						\ 'sexp_emit_tail_element': '<)'
 						\ }
 
+" buffer navigation
 nnoremap <C-j> :bp<CR>
 nnoremap <C-k> :bn<CR>
 nnoremap <C-o> :bd<CR>
@@ -106,7 +106,7 @@ map <left> <C-w><left>
 map <right> <C-w><right>
 
 " Load extra lua config for LSP, autocomplete and gitsigns
-" lua require("config")
+lua require("config")
 
 " QoL improvements
 nnoremap Y y$ 
