@@ -92,6 +92,7 @@ nnoremap <leader>fe :NvimTreeToggle<cr>
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fb <cmd>Telescope current_buffer_fuzzy_find<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>df :Telescope find_files cwd=~/Code/<cr>
 
