@@ -57,7 +57,7 @@ vim.g.nvim_tree_icons = {
 
 -- Treesitter
 require'nvim-treesitter.configs'.setup { 
-				ensure_installed = "maintained", 
+				ensure_installed = { "clojure", "rust", "typescript", "go", "python" },
 				highlight = { enable = true }
 }
 
@@ -232,9 +232,6 @@ cmp.setup {
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
-  },
-  documentation = {
-    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
   },
   experimental = {
     ghost_text = false,

@@ -8,12 +8,12 @@ set cursorline
 set tabstop=2 
 set softtabstop=2
 set hidden
-" wrapping stuff
+" Wrapping stuff
 set textwidth=120
 set colorcolumn=120
-" copy/paste to system clipboard
+" Copy/paste to system clipboard
 set clipboard=unnamedplus
-" autocomplete
+" Autocomplete
 set completeopt=menu,menuone,noselect
 
 call plug#begin()
@@ -29,8 +29,6 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 
 " Themes
-Plug 'morhetz/gruvbox'
-Plug 'arzg/vim-colors-xcode'
 Plug 'rebelot/kanagawa.nvim'
 
 " Fuzzy finder
@@ -38,8 +36,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
-"Treesitter - syntax highlighting
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Treesitter - syntax highlighting
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate'}
 
 " Git
 Plug 'lewis6991/gitsigns.nvim'
@@ -56,7 +54,7 @@ Plug 'dense-analysis/ale'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 
-"LSP autocomplete
+" LSP autocomplete
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -66,15 +64,15 @@ Plug 'saadparwaiz1/cmp_luasnip'
 
 call plug#end()
 
-" set linter for ale
+" Set linter for ale
 let g:ale_linters = {'clojure': ['clj-kondo']}
 
 "============================Keybindings================================
-" use space as leader keys
+" Use space as leader keys
 let mapleader = " "
 let maplocalleader = " "
 
-" custom mappings for vim-sexp
+" Custom mappings for vim-sexp
 let g:sexp_mappings = {
 						\ 'sexp_capture_next_element': '>)',
 						\ 'sexp_capture_prev_element': '<(',
@@ -82,7 +80,7 @@ let g:sexp_mappings = {
 						\ 'sexp_emit_tail_element': '<)'
 						\ }
 
-" buffer navigation
+" Buffer navigation
 nnoremap <C-j> :bp<CR>
 nnoremap <C-k> :bn<CR>
 nnoremap <C-o> :bd<CR>
