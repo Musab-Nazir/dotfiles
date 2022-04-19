@@ -48,7 +48,6 @@ Plug 'clojure-vim/vim-jack-in'
 Plug 'radenling/vim-dispatch-neovim'
 Plug 'tpope/vim-dispatch'
 Plug 'guns/vim-sexp'
-Plug 'dense-analysis/ale'
 
 " LSP stuff
 Plug 'neovim/nvim-lspconfig'
@@ -63,9 +62,6 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 
 call plug#end()
-
-" Set linter for ale
-let g:ale_linters = {'clojure': ['clj-kondo']}
 
 "============================Keybindings================================
 " Use space as leader keys
@@ -105,7 +101,7 @@ map <left> <C-w><left>
 map <right> <C-w><right>
 
 " Load extra lua config for LSP, autocomplete and gitsigns
-lua require("config")
+" lua require("config")
 
 " QoL improvements
 nnoremap Y y$ 
