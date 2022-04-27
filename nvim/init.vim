@@ -6,11 +6,11 @@ set mouse=a
 " Highlight the line where the cursor is
 set cursorline
 set tabstop=2 
+set shiftwidth=2 
+set smarttab
+set expandtab
 set softtabstop=2
 set hidden
-" Wrapping stuff
-set textwidth=120
-set colorcolumn=120
 " Copy/paste to system clipboard
 set clipboard=unnamedplus
 " Autocomplete
@@ -22,7 +22,7 @@ call plug#begin()
 Plug 'nvim-lualine/lualine.nvim'
 
 " Comments
-Plug 'tpope/vim-commentary'
+Plug 'numToStr/Comment.nvim'
 
 " File tree
 Plug 'kyazdani42/nvim-web-devicons'
@@ -43,10 +43,11 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate'}
 Plug 'lewis6991/gitsigns.nvim'
 
 " Clojure stuff
-Plug 'Olical/conjure'		
+Plug 'Olical/conjure'	
 Plug 'clojure-vim/vim-jack-in'
 Plug 'radenling/vim-dispatch-neovim'
 Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'guns/vim-sexp'
 
 " LSP stuff
@@ -68,14 +69,6 @@ call plug#end()
 let mapleader = " "
 let maplocalleader = " "
 
-" Custom mappings for vim-sexp
-let g:sexp_mappings = {
-						\ 'sexp_capture_next_element': '>)',
-						\ 'sexp_capture_prev_element': '<(',
-						\ 'sexp_emit_head_element': '>(',
-						\ 'sexp_emit_tail_element': '<)'
-						\ }
-
 " Buffer navigation
 nnoremap <C-j> :bp<CR>
 nnoremap <C-k> :bn<CR>
@@ -89,10 +82,6 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fb <cmd>Telescope current_buffer_fuzzy_find<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>df :Telescope find_files cwd=~/Code/<cr>
-
-" Toggle comments
-nnoremap <leader>cc :Commentary<cr>
-nnoremap <leader>cs {v}:Commentary<cr>
 
 " Smart way to move between panes
 map <up> <C-w><up>

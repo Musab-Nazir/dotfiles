@@ -1,3 +1,5 @@
+-- Comments
+require('Comment').setup()
 -- Telescope
 require('telescope').setup {
   extensions = {
@@ -56,7 +58,7 @@ vim.g.nvim_tree_icons = {
 
 -- Treesitter
 require'nvim-treesitter.configs'.setup { 
-				ensure_installed = { "clojure", "rust", "typescript", "go", "python" },
+				ensure_installed = { "clojure", "fennel", "rust", "typescript", "go", "python", "julia" },
 				highlight = { enable = true }
 }
 
