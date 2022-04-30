@@ -58,7 +58,7 @@ vim.g.nvim_tree_icons = {
 
 -- Treesitter
 require'nvim-treesitter.configs'.setup { 
-				ensure_installed = { "clojure", "fennel", "rust", "typescript", "go", "python", "julia" },
+				ensure_installed = { "clojure", "fennel", "rust", "typescript", "go", "python" },
 				highlight = { enable = true }
 }
 
@@ -71,12 +71,12 @@ require('lualine').setup {
     section_separators = { left = '', right = '' },
     disabled_filetypes = {},
     always_divide_middle = true,
-    globalstatus = false,
+    globalstatus = true,
   },
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
+    lualine_c = {{'filename', path = 1}},
     lualine_x = {'encoding', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}

@@ -18,6 +18,9 @@ set completeopt=menu,menuone,noselect
 
 call plug#begin()
 
+" Theme
+Plug 'rebelot/kanagawa.nvim'
+
 " Status bar
 Plug 'nvim-lualine/lualine.nvim'
 
@@ -27,9 +30,6 @@ Plug 'numToStr/Comment.nvim'
 " File tree
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
-
-" Themes
-Plug 'rebelot/kanagawa.nvim'
 
 " Fuzzy finder
 Plug 'nvim-lua/plenary.nvim'
@@ -43,7 +43,7 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate'}
 Plug 'lewis6991/gitsigns.nvim'
 
 " Clojure stuff
-Plug 'Olical/conjure'	
+Plug 'Olical/conjure'
 Plug 'clojure-vim/vim-jack-in'
 Plug 'radenling/vim-dispatch-neovim'
 Plug 'tpope/vim-dispatch'
@@ -73,6 +73,9 @@ let maplocalleader = " "
 nnoremap <C-j> :bp<CR>
 nnoremap <C-k> :bn<CR>
 nnoremap <C-o> :bd<CR>
+
+" Use paredit mappings on lisp langages
+let g:sexp_filetypes = 'clojure,scheme,lisp,fennel'
 
 " Toggle file tree
 nnoremap <leader>fe :NvimTreeToggle<cr>
