@@ -58,7 +58,7 @@ vim.g.nvim_tree_icons = {
 
 -- Treesitter
 require'nvim-treesitter.configs'.setup { 
-				ensure_installed = { "clojure", "fennel", "rust", "typescript", "go", "python" },
+				ensure_installed = { "clojure", "fennel", "rust", "typescript", "go", "python", "lua"},
 				highlight = { enable = true }
 }
 
@@ -190,11 +190,6 @@ local kind_icons = {
 }
 
 cmp.setup {
-  snippet = {
-    expand = function(args)
-      require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-    end,
-  },
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
     ["<C-j>"] = cmp.mapping.select_next_item(),
@@ -216,9 +211,8 @@ cmp.setup {
     format = function(entry, vim_item)
       -- Kind icons
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-      -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
-        luasnip = "[Snippet]",
+        nvim_lsp = "[LSP]",
         buffer = "[Buffer]",
         path = "[Path]",
       })[entry.source.name]
@@ -227,7 +221,6 @@ cmp.setup {
   },
   sources = {
     { name = "nvim_lsp"},
-    { name = "luasnip" },
     { name = "buffer" },
   },
   confirm_opts = {
