@@ -16,6 +16,22 @@ require('telescope').setup {
 -- load_extension, somewhere after setup function:
 require('telescope').load_extension('fzf')
 
+-- Which Key
+local wk = require("which-key")
+-- document existing keybinds
+wk.register({
+  f = {
+    name = "File",
+    f = { "Find File" }, 
+    g = { "Find in Files" },
+    b = { "Find in current buffer" },
+    e = "Toggle file explorer",
+    p = "Find in projects folder",
+  },
+  s = "Save buffer",
+  e = "Evaluate"
+}, { prefix = "<leader>" })
+
 -- Git gutter signs
 require('gitsigns').setup{
 	signs = {
@@ -191,21 +207,14 @@ local kind_icons = {
 
 cmp.setup {
   mapping = {
-    ["<C-k>"] = cmp.mapping.select_prev_item(),
-    ["<C-j>"] = cmp.mapping.select_next_item(),
-    ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
-    ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
-    ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
-    ["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-    ["<C-e>"] = cmp.mapping {
-      i = cmp.mapping.abort(),
-      c = cmp.mapping.close(),
+      ['<C-j>'] = cmp.mapping.select_next_item(),
+      ['<C-k>'] = cmp.mapping.select_prev_item(),
+      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      ['<C-Space>'] = cmp.mapping.complete(),
+      ['<C-e>'] = cmp.mapping.abort(),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     },
-    -- Accept currently selected item. If none selected, `select` first item.
-    -- Set `select` to `false` to only confirm explicitly selected items.
-    ["<CR>"] = cmp.mapping.confirm { select = true },
-
-  },
   formatting = {
     fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)

@@ -15,11 +15,16 @@ set hidden
 set clipboard=unnamedplus
 " Autocomplete
 set completeopt=menu,menuone,noselect
+" which-key timeout
+set timeoutlen=500
 
 call plug#begin()
 
 " Theme
 Plug 'rebelot/kanagawa.nvim'
+
+" Which Key
+Plug 'folke/which-key.nvim'
 
 " Status bar
 Plug 'nvim-lualine/lualine.nvim'
@@ -59,8 +64,6 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
-" Plug 'L3MON4D3/LuaSnip'
-" Plug 'saadparwaiz1/cmp_luasnip'
 
 call plug#end()
 
@@ -84,7 +87,7 @@ nnoremap <leader>fe :NvimTreeToggle<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fb <cmd>Telescope current_buffer_fuzzy_find<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>df :Telescope find_files cwd=~/Code/<cr>
+nnoremap <leader>fp :Telescope find_files cwd=~/Code/<cr>
 
 " Smart way to move between panes
 map <up> <C-w><up>
