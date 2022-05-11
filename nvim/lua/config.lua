@@ -26,6 +26,7 @@ wk.register({
     g = { "Find in Files" },
     b = { "Find in current buffer" },
     e = "Toggle file explorer",
+    d = "Find in diagnostics",
     p = "Find in projects folder",
   },
   s = "Save buffer",

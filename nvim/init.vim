@@ -87,6 +87,7 @@ nnoremap <leader>fe :NvimTreeToggle<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fb <cmd>Telescope current_buffer_fuzzy_find<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fd <cmd>Telescope diagnostics<cr>
 nnoremap <leader>fp :Telescope find_files cwd=~/Code/<cr>
 
 " Smart way to move between panes
