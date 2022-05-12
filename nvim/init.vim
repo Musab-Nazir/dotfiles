@@ -58,9 +58,8 @@ Plug 'guns/vim-sexp'
 " Janet
 Plug 'bakpakin/janet.vim'
 
-" LSP stuff
+" LSP
 Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
 
 " LSP autocomplete
 Plug 'hrsh7th/nvim-cmp'
