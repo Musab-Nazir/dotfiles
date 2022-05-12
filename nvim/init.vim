@@ -55,6 +55,9 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'guns/vim-sexp'
 
+" Janet
+Plug 'bakpakin/janet.vim'
+
 " LSP stuff
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
@@ -78,7 +81,7 @@ nnoremap <C-k> :bn<CR>
 nnoremap <C-o> :bd<CR>
 
 " Use paredit mappings on lisp langages
-let g:sexp_filetypes = 'clojure,scheme,lisp,fennel'
+let g:sexp_filetypes = 'clojure,janet,lisp,fennel'
 
 " Toggle file tree
 nnoremap <leader>fe :NvimTreeToggle<cr>
@@ -100,7 +103,6 @@ map <right> <C-w><right>
 " lua require("config")
 
 " QoL improvements
-nnoremap Y y$ 
 nnoremap <leader>s :up<cr>
 nnoremap <F4> :lua package.loaded.config = nil <cr>:source ~/.config/nvim/init.vim <cr>
 
