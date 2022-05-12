@@ -7,8 +7,7 @@ Make sure to install `vim-plug`. There are a few external dependencies needed th
 ### Telescope
 * brew install fd
 * brew install ripgrep
-### Ale
-* brew install borkdude/brew/clj-kondo
+
 ### Extra Lua config
 To configure the LSP, auto complete etc, install the pacakges via `Plug Install` first.
 Then uncomment the following line from init.vim
