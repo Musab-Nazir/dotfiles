@@ -5,10 +5,10 @@ This is a collection of config files I used for a number of different tools and 
 ## Nvim
 Make sure to install `vim-plug`. There are a few external dependencies needed that can be fetched via `brew`.
 ### Telescope
-* brew install fd
-* brew install ripgrep
+* `brew install fd`
+* `brew install ripgrep`
 ### LSP
-* brew install clojure-lsp/brew/clojure-lsp-native
+* `brew install clojure-lsp/brew/clojure-lsp-native`
 
 ### Extra Lua config
 To configure the LSP, auto complete etc, install the pacakges via `Plug Install` first.
