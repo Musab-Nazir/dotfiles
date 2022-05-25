@@ -119,7 +119,7 @@
   (font-lock-negation-char-face                  (:foreground peachRed))
   (font-lock-comment-face                        (:foreground fujiGray :italic t))
   (font-lock-comment-delimiter-face              (:foreground fujiGray :italic t))
-  (font-lock-doc-face                            (:foreground comet))
+  (font-lock-doc-face                            (:foreground springGreen))
   (font-lock-doc-markup-face                     (:foreground comet))
   (font-lock-preprocessor-face	                 (:foreground boatYellow2))
   (elisp-shorthand-font-lock-face                (:foreground fujiWhite))
