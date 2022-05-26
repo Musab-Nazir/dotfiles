@@ -74,3 +74,11 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+;;
+;; Paredit bindings
+(map! :map clojure-mode-map
+      :n ">)" #'sp-forward-slurp-sexp
+      :n "<)" #'sp-forward-barf-sexp
+      :n ">(" #'sp-backward-barf-sexp
+      :n "<(" #'sp-backward-slurp-sexp
+      :n "R" #'raise-sexp)
