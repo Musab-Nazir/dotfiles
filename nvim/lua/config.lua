@@ -21,13 +21,21 @@ local wk = require("which-key")
 -- document existing keybinds
 wk.register({
   f = {
-    name = "File",
-    f = { "Find File" }, 
-    g = { "Find in Files" },
-    b = { "Find in current buffer" },
-    e = "Toggle file explorer",
+    name = "Find",
+    f = "Find File", 
+    g = "Find in Files",
+    b = "Find in current buffer",
     d = "Find in diagnostics",
     p = "Find in projects folder",
+    P = "Find in private config",
+  },
+  w = {
+    name = "Window",
+    v = "Vertical split",
+    s = "Horizontal split",
+    l = "Focus right window",
+    h = "Focus left window",
+    q = "Quit window",
   },
   s = "Save buffer",
   e = "Evaluate"
