@@ -141,7 +141,7 @@ require("lspconfig").clojure_lsp.setup{
 
 	buf_set_keymap("n", "gd", ":lua vim.lsp.buf.definition()<CR>", opts)
 	buf_set_keymap("n", "gD", ":lua vim.lsp.buf.references()<CR>", opts)
-	buf_set_keymap("n", "gr", ":lua vim.lsp.util.rename()<CR>", opts)
+	buf_set_keymap("n", "gr", ":lua vim.lsp.buf.rename()<CR>", opts)
 	buf_set_keymap("n", "<leader>lh", ":lua vim.lsp.buf.hover()<CR>", opts)
 	buf_set_keymap("n", "<leader>lf", ":lua vim.lsp.buf.formatting()<CR>", opts)
   end
