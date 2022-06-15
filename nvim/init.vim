@@ -79,30 +79,35 @@ nnoremap <C-j> :bp<CR>
 nnoremap <C-k> :bn<CR>
 nnoremap <C-o> :bd<CR>
 
-" Use paredit mappings on lisp langages
-let g:sexp_filetypes = 'clojure,janet,lisp,fennel'
-
-" Toggle file tree
-nnoremap <leader>. :NvimTreeToggle<cr>
-
-" Telescope shortcuts
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fb <cmd>Telescope current_buffer_fuzzy_find<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fd <cmd>Telescope diagnostics<cr>
-nnoremap <leader>fp :Telescope find_files cwd=~/Code/<cr>
-nnoremap <leader>fP :Telescope find_files cwd=~/.config/<cr>
-
-" Smart way to move between panes
+" Window navigation
 map <up> <C-w><up>
 map <down> <C-w><down>
 map <left> <C-w><left>
 map <right> <C-w><right>
 
+" Use paredit mappings on lisp langages
+let g:sexp_filetypes = 'clojure,janet,lisp,fennel'
+" remap a key that conflicts with my window navigation bindings
+let g:sexp_mappings = {
+  \ 'sexp_round_head_wrap_element': '',
+\ }
+
+" Toggle file tree
+nnoremap <leader>. :NvimTreeToggle<cr>
+
+" Telescope shortcuts
+nnoremap <leader>ff :Telescope find_files<cr>
+nnoremap <leader>fb :Telescope current_buffer_fuzzy_find<cr>
+nnoremap <leader>fg :Telescope live_grep<cr>
+nnoremap <leader>fd :Telescope diagnostics<cr>
+nnoremap <leader>fp :Telescope find_files cwd=~/Code/<cr>
+nnoremap <leader>fP :Telescope find_files cwd=~/.config/<cr>
+
 " Window splits
 map <leader>wv <C-w>v
 map <leader>ws <C-w>s
 map <leader>wq <C-w>q
+map <leader>wr <C-w>r
 map <leader>wl <C-w><right>
 map <leader>wh <C-w><left>
 

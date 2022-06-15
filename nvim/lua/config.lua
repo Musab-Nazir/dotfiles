@@ -33,6 +33,7 @@ wk.register({
     name = "Window",
     v = "Vertical split",
     s = "Horizontal split",
+    r = "Rotate windows",
     l = "Focus right window",
     h = "Focus left window",
     q = "Quit window",
