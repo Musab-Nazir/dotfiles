@@ -20,6 +20,7 @@ set timeoutlen=500
 
 call plug#begin()
 
+"============================Plugins=======================================
 " Theme
 Plug 'rebelot/kanagawa.nvim'
 
@@ -69,7 +70,7 @@ Plug 'hrsh7th/cmp-path'
 
 call plug#end()
 
-"============================Keybindings================================
+"============================Keybindings=======================================
 " Use space as leader keys
 let mapleader = " "
 let maplocalleader = " "
@@ -111,11 +112,13 @@ map <leader>wr <C-w>r
 map <leader>wl <C-w><right>
 map <leader>wh <C-w><left>
 
+" Save shortcut
+nnoremap <leader>s :up<cr>
+" Reload all configs
+nnoremap <F4> :lua package.loaded.config = nil <cr>:source ~/.config/nvim/init.vim <cr>
+" =============================================================================
+
 " Load extra lua config for LSP, autocomplete and gitsigns
 " lua require("config")
-
-" QoL improvements
-nnoremap <leader>s :up<cr>
-nnoremap <F4> :lua package.loaded.config = nil <cr>:source ~/.config/nvim/init.vim <cr>
 
 colorscheme kanagawa
