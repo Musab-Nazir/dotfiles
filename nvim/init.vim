@@ -111,6 +111,8 @@ map <leader>wq <C-w>q
 map <leader>wr <C-w>r
 map <leader>wl <C-w><right>
 map <leader>wh <C-w><left>
+map <leader>wj <C-w><down>
+map <leader>wk <C-w><up>
 
 " Save shortcut
 nnoremap <leader>s :up<cr>

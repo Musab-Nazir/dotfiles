@@ -36,6 +36,8 @@ wk.register({
     r = "Rotate windows",
     l = "Focus right window",
     h = "Focus left window",
+    j = "Focus below window",
+    k = "Focus above window",
     q = "Quit window",
   },
   s = "Save buffer",
