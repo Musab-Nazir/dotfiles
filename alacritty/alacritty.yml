@@ -46,8 +46,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 4
-    y: 4
+     x: 4
+     y: 4
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
@@ -156,7 +156,7 @@ font:
    style: Bold Italic
 
  # Point size
- size: 14.0
+ size: 12.0
 
  # Offset is the extra space around each character. `offset.y` can be thought
  # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -176,7 +176,7 @@ font:
  #
  # Thin strokes are suitable for retina displays, but for non-retina screens
  # it is recommended to set `use_thin_strokes` to `false`.
- #use_thin_strokes: true
+ use_thin_strokes: true
 
  # Use built-in font for box drawing characters.
  #
@@ -191,7 +191,7 @@ font:
 # Colors (Tomorrow Night)
 colors:
   primary:
-    background: '0x1f1f28'
+    background: '0x181820'
     foreground: '0xdcd7ba'
 
   normal:
