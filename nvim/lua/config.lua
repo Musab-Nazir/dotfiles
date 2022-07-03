@@ -1,5 +1,14 @@
+-- Theme
+local my_colors = {
+    bg = "#181820",
+}
+
+require'kanagawa'.setup({ colors = my_colors })
+vim.cmd("colorscheme kanagawa")
+
 -- Comments
 require('Comment').setup()
+
 -- Telescope
 require('telescope').setup {
   extensions = {

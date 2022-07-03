@@ -121,6 +121,4 @@ nnoremap <F4> :lua package.loaded.config = nil <cr>:source ~/.config/nvim/init.v
 " =============================================================================
 
 " Load extra lua config for LSP, autocomplete and gitsigns
-" lua require("config")
-
-colorscheme kanagawa
+lua require("config")
