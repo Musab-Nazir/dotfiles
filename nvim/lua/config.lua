@@ -6,6 +6,9 @@ local my_colors = {
 require'kanagawa'.setup({ colors = my_colors })
 vim.cmd("colorscheme kanagawa")
 
+-- Rust
+require('rust-tools').setup({})
+
 -- Comments
 require('Comment').setup()
 

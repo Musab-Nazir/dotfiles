@@ -59,6 +59,9 @@ Plug 'guns/vim-sexp'
 " Janet
 Plug 'bakpakin/janet.vim'
 
+" Rust
+Plug 'simrat39/rust-tools.nvim'
+
 " LSP
 Plug 'neovim/nvim-lspconfig'
 
