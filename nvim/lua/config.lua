@@ -194,6 +194,11 @@ local kind_icons = {
 }
 
 cmp.setup {
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+    end,
+  },
   mapping = {
       ['<C-j>'] = cmp.mapping.select_next_item(),
       ['<C-k>'] = cmp.mapping.select_prev_item(),
