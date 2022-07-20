@@ -101,6 +101,9 @@ let g:sexp_mappings = {
 " Toggle file tree
 nnoremap <leader>. :NvimTreeToggle<cr>
 
+" New Buffer
+nnoremap <leader>n :enew<cr>
+
 " Telescope shortcuts
 nnoremap <leader>ff :Telescope find_files<cr>
 nnoremap <leader>fb :Telescope current_buffer_fuzzy_find<cr>

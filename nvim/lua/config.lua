@@ -53,6 +53,7 @@ wk.register({
     q = "Quit window",
   },
   s = "Save buffer",
+  n = "New buffer",
   e = "Evaluate"
 }, { prefix = "<leader>" })
 
