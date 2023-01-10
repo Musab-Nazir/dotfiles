@@ -1,7 +1,10 @@
 # Nvim
 Make sure to install `vim-plug`. There are a few external dependencies needed that can be fetched via `brew`.
+Might also need to install some [NerdFonts](https://www.nerdfonts.com/)
+
 ## Telescope
 * `brew install fd`
+* `brew install fzf`
 * `brew install ripgrep`
 ## LSP
 * `brew install clojure-lsp/brew/clojure-lsp-native`
