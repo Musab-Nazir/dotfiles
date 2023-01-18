@@ -1,6 +1,10 @@
 # Nvim
-Make sure to install `vim-plug`. There are a few external dependencies needed that can be fetched via `brew`.
+Make sure to install `vim-plug`. There are a few external dependencies needed that can be fetched via `brew` or `choco`.
 Might also need to install some [NerdFonts](https://www.nerdfonts.com/)
+
+## General
+* git (vim-plug won't work with out)
+* make
 
 ## Telescope
 * `brew install fd`
