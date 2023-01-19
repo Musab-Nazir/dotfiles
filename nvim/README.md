@@ -3,8 +3,8 @@ Make sure to install `vim-plug`. There are a few external dependencies needed th
 Might also need to install some [NerdFonts](https://www.nerdfonts.com/)
 
 ## General
-* git (vim-plug won't work with out)
-* make
+* `git` (vim-plug won't work with out)
+* `make`
 
 ## Telescope
 * `brew install fd`
@@ -14,7 +14,9 @@ Might also need to install some [NerdFonts](https://www.nerdfonts.com/)
 * `brew install clojure-lsp/brew/clojure-lsp-native`
 ## rust-analyzer
 * `brew install rust-analyzer`
-
+## python
+* `pyright`
+* `nodejs`
 
 ## Extra Lua config
 To configure the LSP, auto complete etc, install the pacakges via `Plug Install` first.

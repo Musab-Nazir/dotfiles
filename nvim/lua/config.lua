@@ -1,9 +1,5 @@
 -- Theme
-local my_colors = {
-    bg = "#181820",
-}
-
-require'kanagawa'.setup({ colors = my_colors })
+require'kanagawa'.setup()
 vim.cmd("colorscheme kanagawa")
 
 -- Rust
@@ -162,6 +158,8 @@ require("lspconfig").clojure_lsp.setup{
 	buf_set_keymap("n", "<leader>lf", ":lua vim.lsp.buf.formatting()<CR>", opts)
   end
 }
+
+require'lspconfig'.pyright.setup{}
 
 -- Setup Auto complete
 local cmp = require'cmp'
