@@ -160,6 +160,7 @@ require("lspconfig").clojure_lsp.setup{
 }
 
 require'lspconfig'.pyright.setup{}
+require'lspconfig'.gopls.setup{}
 
 -- Setup Auto complete
 local cmp = require'cmp'
