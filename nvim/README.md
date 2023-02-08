@@ -19,7 +19,7 @@ Might also need to install some [NerdFonts](https://www.nerdfonts.com/)
 * `pip install pyright`
 * `nodejs`
 ### golang
-`go install golang.org/x/tools/gopls@latest`
+* `go install golang.org/x/tools/gopls@latest`
 
 ## Extra Lua config
 To configure the LSP, auto complete etc, install the pacakges via `Plug Install` first.

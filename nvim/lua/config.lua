@@ -138,27 +138,13 @@ require('lualine').setup {
 }
 
 -- LSP config
-require("lspconfig").clojure_lsp.setup{
-  on_attach = function(client, bufnr)
-	local function buf_set_keymap(...)
-		vim.api.nvim_buf_set_keymap(bufnr, ...)
-	end
-	local function buf_set_option(...)
-		vim.api.nvim_buf_set_option(bufnr, ...)
-	end
+vim.keymap.set("n", "gd", ":lua vim.lsp.buf.definition()<CR>")
+vim.keymap.set("n", "gD", ":lua vim.lsp.buf.references()<CR>")
+vim.keymap.set("n", "gr", ":lua vim.lsp.buf.rename()<CR>")
+vim.keymap.set("n", "<leader>lh", ":lua vim.lsp.buf.hover()<CR>")
+vim.keymap.set("n", "<leader>lf", ":lua vim.lsp.buf.formatting()<CR>")
 
-	buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
-
-	local opts = { noremap = true, silent = true }
-
-	buf_set_keymap("n", "gd", ":lua vim.lsp.buf.definition()<CR>", opts)
-	buf_set_keymap("n", "gD", ":lua vim.lsp.buf.references()<CR>", opts)
-	buf_set_keymap("n", "gr", ":lua vim.lsp.buf.rename()<CR>", opts)
-	buf_set_keymap("n", "<leader>lh", ":lua vim.lsp.buf.hover()<CR>", opts)
-	buf_set_keymap("n", "<leader>lf", ":lua vim.lsp.buf.formatting()<CR>", opts)
-  end
-}
-
+require("lspconfig").clojure_lsp.setup{}
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.gopls.setup{}
 
