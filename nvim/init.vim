@@ -62,6 +62,9 @@ Plug 'bakpakin/janet.vim'
 " Rust
 Plug 'simrat39/rust-tools.nvim'
 
+" Elm
+Plug 'elmcast/elm-vim'
+
 " LSP
 Plug 'neovim/nvim-lspconfig'
 
@@ -91,6 +94,8 @@ map <down> <C-w><down>
 map <left> <C-w><left>
 map <right> <C-w><right>
 
+" Elm format on save
+let g:elm_format_autosave = 1
 " Use paredit mappings on lisp langages
 let g:sexp_filetypes = 'clojure,janet,lisp,fennel'
 " remap a key that conflicts with my window navigation bindings
