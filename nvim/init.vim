@@ -65,6 +65,9 @@ Plug 'simrat39/rust-tools.nvim'
 " Elm
 Plug 'elmcast/elm-vim'
 
+" Roc
+Plug 'ChrisWellsWood/roc.vim'
+
 " LSP
 Plug 'neovim/nvim-lspconfig'
 
