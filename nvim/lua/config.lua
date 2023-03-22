@@ -1,7 +1,3 @@
--- Theme
-require'kanagawa'.setup()
-vim.cmd("colorscheme kanagawa")
-
 -- Rust
 require('rust-tools').setup({})
 

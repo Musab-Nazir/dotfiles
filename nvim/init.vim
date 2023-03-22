@@ -89,7 +89,7 @@ let maplocalleader = " "
 " Buffer navigation
 nnoremap <C-j> :bp<CR>
 nnoremap <C-k> :bn<CR>
-nnoremap <C-o> :bd<CR>
+nnoremap <C-d> :bd<CR>
 
 " Window navigation
 map <up> <C-w><up>
@@ -135,6 +135,7 @@ nnoremap <leader>s :up<cr>
 " Reload all configs
 nnoremap <F4> :lua package.loaded.config = nil <cr>:source ~/.config/nvim/init.vim <cr>
 " =============================================================================
+colorscheme kanagawa
 
 " Load extra lua config for LSP, autocomplete and gitsigns
 lua require("config")
