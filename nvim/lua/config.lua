@@ -134,13 +134,6 @@ require('lualine').setup {
 }
 
 -- LSP config
-vim.keymap.set("n", "gd", ":lua vim.lsp.buf.definition()<CR>")
-vim.keymap.set("n", "gD", ":lua vim.lsp.buf.references()<CR>")
-vim.keymap.set("n", "gr", ":lua vim.lsp.buf.rename()<CR>")
-vim.keymap.set("n", "<leader>lh", ":lua vim.lsp.buf.hover()<CR>")
-vim.keymap.set("n", "<leader>le", ":lua vim.diagnostic.open_float()<CR>")
-vim.keymap.set("n", "<leader>lf", ":lua vim.lsp.buf.formatting()<CR>")
-
 require("lspconfig").clojure_lsp.setup{}
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.gopls.setup{}
@@ -217,3 +210,35 @@ cmp.setup {
     native_menu = false,
   },
 }
+
+-- Debugging
+require('dap-go').setup()
+
+require('dapui').setup()
+
+-- open dapui when debug session is initialized
+local dap, dapui = require("dap"), require("dapui")
+dap.listeners.after.event_initialized["dapui_config"] = function()
+  dapui.open()
+end
+dap.listeners.before.event_terminated["dapui_config"] = function()
+  dapui.close()
+end
+dap.listeners.before.event_exited["dapui_config"] = function()
+  dapui.close()
+end
+
+-- Keymaps
+vim.keymap.set("n", "gd", ":lua vim.lsp.buf.definition()<CR>")
+vim.keymap.set("n", "gD", ":lua vim.lsp.buf.references()<CR>")
+vim.keymap.set("n", "gr", ":lua vim.lsp.buf.rename()<CR>")
+vim.keymap.set("n", "<leader>lh", ":lua vim.lsp.buf.hover()<CR>")
+vim.keymap.set("n", "<leader>le", ":lua vim.diagnostic.open_float()<CR>")
+vim.keymap.set("n", "<leader>lf", ":lua vim.lsp.buf.format() {async = true}<CR>")
+vim.keymap.set("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>")
+vim.keymap.set("n", "<leader>dr", ":lua require'dap'.repl_open()<CR>")
+vim.keymap.set("n", "<leader>dt", ":lua require'dapui'.toggle()<CR>")
+vim.keymap.set("n", "<F5>", ":lua require'dap'.continue()<CR>")
+vim.keymap.set("n", "<F10>", ":lua require'dap'.step_over()<CR>")
+vim.keymap.set("n", "<F11>", ":lua require'dap'.step_into()<CR>")
+vim.keymap.set("n", "<F12>", ":lua require'dap'.step_out()<CR>")

@@ -21,6 +21,10 @@ Might also need to install some [NerdFonts](https://www.nerdfonts.com/)
 ### golang
 * `go install golang.org/x/tools/gopls@latest`
 
+## Debugger
+### golang
+* `go install github.com/go-delve/delve/cmd/dlv@latest`
+
 ## Extra Lua config
 To configure the LSP, auto complete etc, install the pacakges via `Plug Install` first.
 Then uncomment the following line from init.vim
