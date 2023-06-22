@@ -1,0 +1,10 @@
+theme = "kanagawa"
+
+[editor]
+true-color = true
+bufferline = "multiple"
+
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
