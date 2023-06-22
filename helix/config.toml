@@ -3,6 +3,7 @@ theme = "kanagawa"
 [editor]
 true-color = true
 bufferline = "multiple"
+cursorline = true
 
 
 [editor.cursor-shape]
