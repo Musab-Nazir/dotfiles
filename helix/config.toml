@@ -12,3 +12,4 @@ normal = "block"
 [keys.normal.space]
 q = ":quit"
 W = ":write"
+B = ":buffer-close"
