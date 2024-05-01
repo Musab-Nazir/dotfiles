@@ -46,6 +46,7 @@ mods = "Command"
 
 [window]
 dynamic_padding = false
+decorations = "None"
 startup_mode = "Maximized"
 
 [window.padding]
