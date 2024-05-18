@@ -35,17 +35,15 @@ background = "0x2d4f67"
 foreground = "0xc8c093"
 
 [font]
-size = 14
+size = 12
 
 [[keyboard.bindings]]
-action = "SpawnNewInstance"
+action = "CreateNewWindow"
 key = "N"
 mods = "Command"
 
-[[keyboard.bindings]]
-chars = "\u0015"
-key = "Back"
-mods = "Command"
+[selection]
+save_to_clipboard = true
 
 [window]
 dynamic_padding = false

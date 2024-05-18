@@ -1,8 +1,19 @@
-# Lines configured by zsh-newuser-install
+## History
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=2000
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt hist_ignore_all_dups
+setopt hist_ignore_dups
+setopt hist_save_no_dups
+setopt hist_find_no_dups
+
+## KEYBINDS
 bindkey -v
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+
+# Lines configured by zsh-newuser-install
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/musab/.zshrc'
@@ -20,7 +31,6 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ## ALIASES
 alias vim="nvim"
 alias cljrepl="clj -A:nREPL"
-alias janrepl="janet -e \"(import spork/netrepl) (netrepl/server)\""
 
 # change the format of the 'time' command
 TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
