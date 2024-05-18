@@ -11,6 +11,13 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+## PLUGINS
+# add autosuggestions
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# add syntax highlighting
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ 
+## ALIASES
 alias vim="nvim"
 alias cljrepl="clj -A:nREPL"
 alias janrepl="janet -e \"(import spork/netrepl) (netrepl/server)\""
