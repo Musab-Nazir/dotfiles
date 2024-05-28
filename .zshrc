@@ -31,6 +31,7 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ## ALIASES
 alias vim="nvim"
 alias cljrepl="clj -A:nREPL"
+alias lz="lazygit"
 
 # change the format of the 'time' command
 TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
