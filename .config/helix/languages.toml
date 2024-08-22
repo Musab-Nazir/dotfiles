@@ -23,4 +23,4 @@ formatter = { command = "roc", args =[ "format", "--stdin", "--stdout"]}
 [[grammar]]
 
 name = "roc"
-source = { git = "https://github.com/faldor20/tree-sitter-roc.git", rev = "05548ef95b15f1bcda96e092e19fcbf58dda70e8" }
+source = { git = "https://github.com/faldor20/tree-sitter-roc.git", rev = "ef46edd0c03ea30a22f7e92bc68628fb7231dc8a" }
