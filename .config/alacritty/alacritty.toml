@@ -38,7 +38,7 @@ foreground = "0xc8c093"
 size = 12
 
 [[keyboard.bindings]]
-action = "SpawnNewInstance"
+action = "CreateNewWindow"
 key = "N"
 mods = "Command"
 
