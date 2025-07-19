@@ -4,6 +4,7 @@ theme = "kanagawa"
 true-color = true
 bufferline = "multiple"
 cursorline = true
+line-number = "relative"
 
 [editor.cursor-shape]
 insert = "bar"
