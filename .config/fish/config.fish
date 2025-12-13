@@ -16,6 +16,7 @@ set -gx PATH ~/roc-alpha3-rolling $PATH
 set -Ux PROTON_USE_NTSYNC 1
 set -Ux PROTON_ENABLE_WAYLAND 1
 set -Ux PROTON_FSR4_UPGRADE 1
+set -Ux PROTON_FSR4_RDNA3_UPGRADE 1
 
 # aliases
 # alias ls="eza"
